@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+    <title>Softech Solutions</title>
+  </head>
+  <body>
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="">Services</a>
+          <ul id="">
+            <li><a href="">IT Services</a>
+              <ul>
+                <li><a href="">Continuos Integration</a></li>
+                <li><a href="">Service Oriented Architecture</a></li>
+                <li><a href="">Strategic Planning</a></li>
+                <li><a href="">Enterprise Achitecture</a></li>
+                <li><a href="">Infrastructure Planning</a></li>
+              </ul>
+            </li>
+            <li><a href="#first">Operations Support Systems</a>
+              <ul>
+                <li><a href="">Application Management</a></li>
+                <li><a href="">Operation Management</a></li>
+                <li><a href="">Business Continuity and Disaster Recovery</a></li>
+                <li><a href="">IT Performance</a></li>
+              </ul>
+            </li>
+          </ul>
+        <li><a href="">Insight and Analysis</a></li>
+        <li>
+          <a href="">Why Softech?</a>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Managment</a></li>
+          </ul>
+        </li>
+        <li><a href="">Careers</a></li>
+        <li><a href="">Contact Us</a></li>
+        </li>
+      </ul>
+    </nav>
+    <div id="page">
+      <div class="container" style="width: 100%; padding: 0px;">
+        <div class="row splash">
+          <div class="col-lg-8 red">
+            <a href="#menu"><img class="menubutton" src="img/menu.png"><img></a>
+            <center><img class="white-logo" width= "250px" src="img/slogo.png"></img></center>
+          </div>
+          <div class="col-lg-4 gray">
+            <center><img class="rightlogo" width="150px" src="img/logoright.png"></img></center>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<script type="text/javascript" src="js/custom.js"></script>-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        var $menu = $('nav#menu'),
+          $html = $('html, body');
+
+        $menu.mmenu();
+        $menu.find( 'li > a' ).on(
+          'click',
+          function()
+          {
+            var href = $(this).attr( 'href' );
+
+            //  if the clicked link is linked to an anchor, scroll the page to that anchor 
+            if ( href.slice( 0, 1 ) == '#' )
+            {
+              $menu.one(
+                'closed.mm',
+                function()
+                {
+                  setTimeout(
+                    function()
+                    {
+                      $html.animate({
+                        scrollTop: $( href ).offset().top
+                      }); 
+                    }, 10
+                  );  
+                }
+              );            
+            }
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

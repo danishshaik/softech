@@ -1,0 +1,31 @@
+.splash{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.gray{
+	padding: none;
+	background-color: #363B48;
+	height: 667px;
+}
+
+.red{
+	padding:none;
+	background-color: #E54E43;
+	height: 667px;
+}
+
+.white-logo{
+	margin-top: 9.5%;
+}
+
+.rightlogo{
+	margin-top:57%;
+}
+
+.menubutton{
+	width:30px;
+	margin-top:2.65%;
+	margin-left:1%;
+}
