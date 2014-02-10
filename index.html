@@ -70,53 +70,6 @@
       #map-canvas { height: 500px; }
     </style>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxtYULIoB8mqAajZp3_3VocSk_OtV3bZI&sensor=true"></script>
-    
-    <script type="text/javascript">
-function initialize() {
-  var mapOptions = {
-    zoom: 4,
-    center: new google.maps.LatLng(37.322998, -122.032182)
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
-                                mapOptions);
-
-  var image = 'images/beachflag.png';
-  var myLatLng = new google.maps.LatLng(37.322998, -122.032182);
-  var beachMarker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      icon: "img/marker3.png"
-  });
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-        <script type="text/javascript">
-    var styles = [
-  {
-    stylers: [
-      { hue: "#00ffe6" },
-      { saturation: -20 }
-    ]
-  },{
-    featureType: "road",
-    elementType: "geometry",
-    stylers: [
-      { lightness: 100 },
-      { visibility: "simplified" }
-    ]
-  },{
-    featureType: "road",
-    elementType: "labels",
-    stylers: [
-      { visibility: "off" }
-    ]
-  }
-];
-
-map.setOptions({styles: styles});
-
-    </script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.mmenu.js"></script>
@@ -153,6 +106,49 @@ map.setOptions({styles: styles});
           }
         );
       });
+      function initialize() {
+  var mapOptions = {
+    zoom: 4,
+    center: new google.maps.LatLng(37.322998, -122.032182)
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                mapOptions);
+
+  var image = 'img/marker3.png';
+  var myLatLng = new google.maps.LatLng(37.322998, -122.032182);
+  var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: "img/marker3.png"
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+        <script type="text/javascript">
+    var styles = [
+  {
+    stylers: [
+      { hue: "#00ffe6" },
+      { saturation: -20 }
+    ]
+  },{
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      { lightness: 100 },
+      { visibility: "simplified" }
+    ]
+  },{
+    featureType: "road",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+];
+
+map.setOptions({styles: styles});
     </script>
   </body>
 </html>
