@@ -29,3 +29,26 @@
 	margin-top:2.65%;
 	margin-left:1%;
 }
+
+.contact{
+	height:400px;
+	background-color: #363B48;
+	width: 100%;
+	margin: 0px;
+}
+
+.address{
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.nounderline:hover {text-decoration: none;}
+
+.footer{
+	height: 100px;
+	width: 100%;
+	background-color: #E54E43;
+	margin: 0px;
+}
